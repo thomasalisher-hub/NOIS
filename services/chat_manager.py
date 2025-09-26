@@ -1,7 +1,7 @@
 # services/chat_manager.py
 from aiogram import Bot
 from aiogram.types import ChatPermissions
-from db.models import db
+from db.database import db
 import logging
 
 logger = logging.getLogger(__name__)
