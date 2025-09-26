@@ -1,0 +1,333 @@
+2025-09-27 00:43:39,501 - __main__ - INFO - [bot.py:177] - 🎯 Бот NOIS запускается...
+2025-09-27 00:43:39,959 - __main__ - INFO - [bot.py:178] - 🤖 ID бота: 8354475702
+2025-09-27 00:43:40,021 - __main__ - INFO - [bot.py:179] - 👤 Username бота: @no_one_is_superfluous_bot
+2025-09-27 00:43:40,022 - aiogram.dispatcher - INFO - [dispatcher.py:527] - Start polling
+2025-09-27 00:43:40,085 - aiogram.dispatcher - INFO - [dispatcher.py:341] - Run polling for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 00:43:56,479 - aiogram.event - INFO - [dispatcher.py:172] - Update id=367494962 is not handled. Duration 5 ms by bot id=8354475702
+2025-09-27 00:43:56,480 - aiogram.event - ERROR - [dispatcher.py:315] - Cause exception while process update id=367494962 by bot id=8354475702
+TypeError: bot_lifespan() takes 1 positional argument but 3 were given
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+                 ~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 338, in helper
+    return _AsyncGeneratorContextManager(func, args, kwds)
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 109, in __init__
+    self.gen = func(*args, **kwds)
+               ~~~~^^^^^^^^^^^^^^^
+TypeError: bot_lifespan() takes 1 positional argument but 3 were given
+2025-09-27 00:44:44,545 - aiogram.dispatcher - INFO - [dispatcher.py:554] - Polling stopped
+2025-09-27 00:44:44,824 - __main__ - INFO - [bot.py:194] - 🏁 Работа бота завершена
+2025-09-27 00:44:44,837 - aiogram.dispatcher - INFO - [dispatcher.py:359] - Polling stopped for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 00:44:44,848 - __main__ - INFO - [bot.py:202] - 👋 До свидания!
+2025-09-27 00:46:20,972 - __main__ - ERROR - [bot.py:163] - ❌ Ошибка импорта модулей: cannot import name 'router' from 'handlers.start' (C:\Users\Эля\Desktop\NOIS\handlers\start.py)
+2025-09-27 00:46:20,974 - __main__ - CRITICAL - [bot.py:209] - 💥 Критическая ошибка в main(): cannot import name 'router' from 'handlers.start' (C:\Users\Эля\Desktop\NOIS\handlers\start.py)
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 192, in main
+    await register_handlers(dp)
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 138, in register_handlers
+    from handlers.start import router as start_router
+ImportError: cannot import name 'router' from 'handlers.start' (C:\Users\Эля\Desktop\NOIS\handlers\start.py)
+2025-09-27 00:46:20,984 - __main__ - INFO - [bot.py:212] - 🏁 Завершение работы...
+2025-09-27 00:46:20,987 - __main__ - CRITICAL - [bot.py:225] - 💀 Фатальная ошибка: 0
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 192, in main
+    await register_handlers(dp)
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 138, in register_handlers
+    from handlers.start import router as start_router
+ImportError: cannot import name 'router' from 'handlers.start' (C:\Users\Эля\Desktop\NOIS\handlers\start.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 221, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 213, in main
+    if 'db' in dp:
+       ^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 101, in __getitem__
+    return self.workflow_data[item]
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 0
+2025-09-27 00:49:08,985 - __main__ - INFO - [bot.py:100] - ✅ Модули handlers импортированы
+2025-09-27 00:49:08,989 - __main__ - INFO - [bot.py:130] - ✅ Всего обработчиков: 0
+2025-09-27 00:49:08,989 - __main__ - INFO - [bot.py:190] - 🎯 Бот NOIS запускается...
+2025-09-27 00:49:09,556 - __main__ - INFO - [bot.py:192] - 🤖 ID бота: 8354475702
+2025-09-27 00:49:09,556 - __main__ - INFO - [bot.py:193] - 👤 Username бота: @no_one_is_superfluous_bot
+2025-09-27 00:49:09,557 - aiogram.dispatcher - INFO - [dispatcher.py:527] - Start polling
+2025-09-27 00:49:09,657 - aiogram.dispatcher - INFO - [dispatcher.py:341] - Run polling for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 00:49:21,617 - aiogram.event - INFO - [dispatcher.py:172] - Update id=367494963 is not handled. Duration 2 ms by bot id=8354475702
+2025-09-27 00:50:01,533 - aiogram.dispatcher - INFO - [dispatcher.py:554] - Polling stopped
+2025-09-27 00:50:01,886 - __main__ - INFO - [bot.py:208] - 🏁 Завершение работы...
+2025-09-27 00:50:02,739 - aiogram.dispatcher - ERROR - [dispatcher.py:219] - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2785)
+2025-09-27 00:50:02,743 - aiogram.dispatcher - WARNING - [dispatcher.py:221] - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8354475702)
+2025-09-27 00:50:02,874 - __main__ - INFO - [bot.py:212] - ✅ База данных отключена
+2025-09-27 00:50:02,909 - aiogram.dispatcher - INFO - [dispatcher.py:359] - Polling stopped for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 00:50:02,950 - __main__ - INFO - [bot.py:219] - 👋 До свидания!
+2025-09-27 00:52:24,834 - __main__ - INFO - [bot.py:175] - ✅ База данных подключена
+2025-09-27 00:52:25,023 - __main__ - INFO - [bot.py:113] - ✅ Все routers зарегистрированы
+2025-09-27 00:52:25,024 - __main__ - INFO - [bot.py:205] - 🎯 Бот NOIS запускается...
+2025-09-27 00:52:25,449 - __main__ - INFO - [bot.py:207] - 🤖 ID бота: 8354475702
+2025-09-27 00:52:25,449 - __main__ - INFO - [bot.py:208] - 👤 Username бота: @no_one_is_superfluous_bot
+2025-09-27 00:52:25,449 - __main__ - CRITICAL - [bot.py:221] - 💥 Критическая ошибка в main(): 'Dispatcher' object has no attribute 'routes'
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 209, in main
+    logger.info(f"📊 Зарегистрировано routers: {len(dp.routes)}")
+                                                    ^^^^^^^^^
+AttributeError: 'Dispatcher' object has no attribute 'routes'
+2025-09-27 00:52:25,459 - __main__ - INFO - [bot.py:224] - 🏁 Завершение работы...
+2025-09-27 00:52:25,489 - __main__ - INFO - [bot.py:228] - ✅ База данных отключена
+2025-09-27 00:52:25,493 - __main__ - CRITICAL - [bot.py:238] - 💀 Фатальная ошибка: 'Dispatcher' object has no attribute 'routes'
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 234, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Эля\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Эля\Desktop\NOIS\bot.py", line 209, in main
+    logger.info(f"📊 Зарегистрировано routers: {len(dp.routes)}")
+                                                    ^^^^^^^^^
+AttributeError: 'Dispatcher' object has no attribute 'routes'
+2025-09-27 00:52:25,667 - asyncio - ERROR - [base_events.py:1879] - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000204D9744050>
+2025-09-27 00:52:25,668 - asyncio - ERROR - [base_events.py:1879] - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000204D96F2BD0>, 34986.5667077)])']
+connector: <aiohttp.connector.TCPConnector object at 0x00000204D95F3CB0>
+2025-09-27 00:54:46,886 - __main__ - INFO - [bot.py:130] - ✅ База данных подключена
+2025-09-27 00:54:47,086 - __main__ - INFO - [bot.py:113] - ✅ Все routers зарегистрированы
+2025-09-27 00:54:47,086 - __main__ - INFO - [bot.py:160] - 🎯 Бот NOIS запускается...
+2025-09-27 00:54:47,653 - __main__ - INFO - [bot.py:162] - 🤖 ID бота: 8354475702
+2025-09-27 00:54:47,653 - __main__ - INFO - [bot.py:163] - 👤 Username бота: @no_one_is_superfluous_bot
+2025-09-27 00:54:47,653 - __main__ - INFO - [bot.py:166] - 📊 Routers зарегистрированы успешно
+2025-09-27 00:54:47,654 - aiogram.dispatcher - INFO - [dispatcher.py:527] - Start polling
+2025-09-27 00:54:47,754 - aiogram.dispatcher - INFO - [dispatcher.py:341] - Run polling for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 00:55:01,264 - __main__ - ERROR - [bot.py:89] - Необработанная ошибка: 'NoneType' object has no attribute 'acquire'
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\handlers\start.py", line 72, in cmd_start
+    existing_user = await db.get_user(user_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\db\models.py", line 36, in get_user
+    async with self.pool.acquire() as conn:
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'acquire'
+2025-09-27 00:55:01,685 - aiogram.event - INFO - [dispatcher.py:172] - Update id=367494964 is handled. Duration 425 ms by bot id=8354475702
+2025-09-27 00:55:10,670 - __main__ - ERROR - [bot.py:89] - Необработанная ошибка: 'NoneType' object has no attribute 'acquire'
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\handlers\rooms.py", line 153, in cmd_rooms
+    user = await db.get_user(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\db\models.py", line 36, in get_user
+    async with self.pool.acquire() as conn:
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'acquire'
+2025-09-27 00:55:10,854 - aiogram.event - INFO - [dispatcher.py:172] - Update id=367494965 is handled. Duration 184 ms by bot id=8354475702
+2025-09-27 00:56:01,342 - aiogram.dispatcher - INFO - [dispatcher.py:554] - Polling stopped
+2025-09-27 00:56:01,611 - __main__ - INFO - [bot.py:181] - 🏁 Завершение работы...
+2025-09-27 00:56:01,681 - __main__ - INFO - [bot.py:185] - ✅ База данных отключена
+2025-09-27 00:56:01,696 - aiogram.dispatcher - INFO - [dispatcher.py:359] - Polling stopped for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 00:56:01,714 - __main__ - INFO - [bot.py:193] - 👋 До свидания!
+2025-09-27 00:56:24,285 - __main__ - INFO - [bot.py:130] - ✅ База данных подключена
+2025-09-27 00:56:24,515 - __main__ - INFO - [bot.py:113] - ✅ Все routers зарегистрированы
+2025-09-27 00:56:24,516 - __main__ - INFO - [bot.py:160] - 🎯 Бот NOIS запускается...
+2025-09-27 00:56:24,999 - __main__ - INFO - [bot.py:162] - 🤖 ID бота: 8354475702
+2025-09-27 00:56:25,000 - __main__ - INFO - [bot.py:163] - 👤 Username бота: @no_one_is_superfluous_bot
+2025-09-27 00:56:25,000 - __main__ - INFO - [bot.py:166] - 📊 Routers зарегистрированы успешно
+2025-09-27 00:56:25,002 - aiogram.dispatcher - INFO - [dispatcher.py:527] - Start polling
+2025-09-27 00:56:25,071 - aiogram.dispatcher - INFO - [dispatcher.py:341] - Run polling for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 00:56:59,113 - __main__ - ERROR - [bot.py:89] - Необработанная ошибка: 'NoneType' object has no attribute 'acquire'
+Traceback (most recent call last):
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\handlers\start.py", line 72, in cmd_start
+    existing_user = await db.get_user(user_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Эля\Desktop\NOIS\db\models.py", line 36, in get_user
+    async with self.pool.acquire() as conn:
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'acquire'
+2025-09-27 00:56:59,647 - aiogram.event - INFO - [dispatcher.py:172] - Update id=367494966 is handled. Duration 569 ms by bot id=8354475702
+2025-09-27 01:01:22,652 - aiogram.dispatcher - INFO - [dispatcher.py:554] - Polling stopped
+2025-09-27 01:01:23,295 - __main__ - INFO - [bot.py:181] - 🏁 Завершение работы...
+2025-09-27 01:01:23,443 - __main__ - INFO - [bot.py:185] - ✅ База данных отключена
+2025-09-27 01:01:23,516 - aiogram.dispatcher - INFO - [dispatcher.py:359] - Polling stopped for bot @no_one_is_superfluous_bot id=8354475702 - 'NOIS'
+2025-09-27 01:01:23,586 - __main__ - INFO - [bot.py:193] - 👋 До свидания!
